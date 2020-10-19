@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-MVVM", "WPF-MVVM\WPF-MVVM.csproj", "{F9724CC4-7DA1-47D4-9C75-87497D7FA832}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{69AA2188-068B-4596-9E76-A5BD7DA7952B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFConsole", "Tests\WPFConcol\WPFConsole.csproj", "{BEA0E26D-3B26-475C-8293-C7C122FDB005}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{F9724CC4-7DA1-47D4-9C75-87497D7FA832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9724CC4-7DA1-47D4-9C75-87497D7FA832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9724CC4-7DA1-47D4-9C75-87497D7FA832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA0E26D-3B26-475C-8293-C7C122FDB005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA0E26D-3B26-475C-8293-C7C122FDB005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA0E26D-3B26-475C-8293-C7C122FDB005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA0E26D-3B26-475C-8293-C7C122FDB005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BEA0E26D-3B26-475C-8293-C7C122FDB005} = {69AA2188-068B-4596-9E76-A5BD7DA7952B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44E5C7A2-C74A-4544-B15D-7DCF4F4E98C0}
