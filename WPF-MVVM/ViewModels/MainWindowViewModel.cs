@@ -17,5 +17,15 @@ namespace WPF_MVVM.ViewModels
             set => Set(ref _Title, value);
         }
         #endregion
+
+        #region Status :string - Status application
+
+        private string _Status = "Done!";
+
+        public string Status { 
+            get => _Status; 
+            set => Set(ref _Status, value);
+        }
+        #endregion
     }
 }
