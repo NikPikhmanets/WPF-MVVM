@@ -6,17 +6,60 @@
         xmlns:vm="clr-namespace:WPF_MVVM.ViewModels"
         xmlns:local="clr-namespace:WPF_MVVM"
         mc:Ignorable="d"
-        Title="{Binding Path=Title}" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner">
+        Title="{Binding Path=Title}" Height="450" Width="800" ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
-    <Grid>
-        <TextBox HorizontalAlignment="Center" 
-                 VerticalAlignment="Top" 
-                 Margin="0,66,0,0" 
-                 Width="422"
-                 Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
-                 TextWrapping="Wrap"/>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem >
+                <TextBlock Text="1234"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar Width="120" Height="14" Value="30"/>
+            </StatusBarItem>
+        </StatusBar>
+        <TabControl >
+            <TabItem Header="Tab 1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="17*"/>
+                        <RowDefinition Height="202*"/>
+                        <RowDefinition Height="169*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="215*"/>
+                        <ColumnDefinition Width="182*"/>
+                    </Grid.ColumnDefinitions>
 
-    </Grid>
+                    <Rectangle Grid.Column="0" 
+                               Grid.Row="0"
+                               Fill="Blue" 
+                               Stroke="Red" 
+                               StrokeThickness="3" 
+                               RadiusX="5" 
+                               RadiusY="7" 
+                               Grid.RowSpan="2"
+                               Margin="5,7"/>
+
+                    <Ellipse   Grid.Column="1" 
+                               Grid.Row="0"
+                               Fill="Blue" 
+                               Stroke="Red" 
+                               StrokeThickness="3" 
+                               Grid.RowSpan="2"
+                               Margin="5.7"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tab 2"></TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
