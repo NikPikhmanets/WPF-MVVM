@@ -3,10 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WPF_MVVM.ViewModels"
         xmlns:local="clr-namespace:WPF_MVVM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{Binding Path=Title}" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
+        <TextBox HorizontalAlignment="Center" 
+                 VerticalAlignment="Top" 
+                 Margin="0,66,0,0" 
+                 Width="422"
+                 Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+                 TextWrapping="Wrap"/>
 
     </Grid>
 </Window>
